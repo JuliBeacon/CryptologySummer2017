@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>没想好名字的网站</title>
+  <style>
+      #topper{   
+          background-color:goldenrod;
+          font-family: Verdana;
+          opacity:0.75;
+          text-align:center;
+      }
+      #left{
+          width:250px; 
+          height:1000px;     
+          padding:5px;
+          opacity:1;
+          float:left;
+      }
+      #section{
+          float:center;
+          text-align: left;
+          padding:5px;
+          color: white;
+          font-family: Verdana;
+          font-size: 30px;
+      }
+    </style>
+</head>
+
+<body style="background-image:url(http://www.ppt360.com/background/UploadFiles_6733/201103/2011031920263421.jpg)">
+
+<div id="topper">
+    <span style="float:center; font-size:70px;">RESOURCE SHARING! </span>
+    <a href="http://localhost/content.html" style=" font-size:30px; color:azure; font-family:Verdana; float:right; ">log out</a>
+</div>
+
+<div style="opacity:1; height:90px;"></div>
+<div id="left"></div>
+
+<div id="section">
+    <?php echo "Hello ,". $_POST["username"]."~" ?><br>
+    <span>You can </span>
+     <a href="" style="width:80px; color:gold; font-family:Verdana; float:center "> upload</a>
+     <span>files or download files in the list below ~</span>
+</div>
+
+</body>
+</html>

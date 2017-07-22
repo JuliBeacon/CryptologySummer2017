@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <title>REGISTER</title>
+    <style type="text/css">
+        .error{ color: red; }
+        .ok {color: darkorange ;}
+        .success{ color: green; }
+        #roof{
+    			width:110px;        
+    			float:right;
+   				padding:5px;
+			}
+    </style>
+   </head>
+
+
+
+   <body style="background-image:url(http://www.taoqao.com/uploads/allimg/120410/1-120410202F0.gif)">
+ <div id="roof" style="color:white"><h1>.</h1></div>
+<div>
+       <h2 style=" font-family:verdana">USER REGISTER</h2>
+       <span class="error" style=" font-family:verdana"> *required field.</span>
+</div>
+<form method = "post" action = "register.php">
+         <table>
+            <tr>
+               <td style=" font-family:verdana">Full Name:</td>
+               <td><input type = "text" name = "name" size="36"></td>
+            </tr>
+
+            <tr>
+               <td><span class="txt-impt" style=" font-family:verdana;color:red">*</span><span style=" font-family:verdana;">E-mail:</span></td>
+               <td><input type = "text" name = "email" size="36" required>
+		<span class="error"><b><?php echo $emailErr; ?></b></span>
+		</td>
+            </tr>
+
+            <tr>
+               <td><span class="txt-impt"  style=" font-family:verdana"><font color="FF0000">*</font></span><span style=" font-family:verdana;">Username:</span></td>
+               <td>
+                   <input type = "text" name = "username" value="<?php echo $name; ?>" size="36" required>
+                   <div id="reg" class="tips" style="display: block;">
+						<span class="txt-tips" style="font-family:verdana; font-weight: normal; color: rgb(153, 153, 153);">可使用字母、数字、汉字</span>
+					</div>
+                   <span class="error"><b><?php echo $usrErr; ?></b></span>
+               </td>
+
+            </tr>
+
+            <tr>
+               <td><span class="txt-impt" style=" font-family:verdana;"><font color="FF0000">*</font></span><span style=" font-family:verdana;">Password:</span></td>
+               <td><input type = "password" name = "psw" size="36" required></textarea>
+              <div id="reg" class="tips" style="display: block;">
+						<span class="txt-tips" style="font-family:verdana ;font-weight: normal; color: rgb(153, 153, 153);">不多于36个字符</span>
+					</div>
+                   <span class="error" style="font-family:verdana"><b><?php echo $pswErr; ?></b></span>
+                   <span class="ok" style="font-family:verdana"><b><?php echo $pswOK; ?></b></span>
+                   <span class="success" style="font-family:verdana"><b><?php echo $pswGreat; ?></b></span>
+               </td>
+
+            </tr>
+
+            <tr>
+               <td style=" font-family:verdana;">Gender:</td>
+               <td>
+                  <input type = "radio" name = "gender" value = "female"><span  style=" font-family:verdana;">Female</span>
+                  <input type = "radio" name = "gender" value = "male" ><span  style=" font-family:verdana;">Male</span>
+               </td>
+            </tr>
+
+            <tr>
+               <td>
+                   <br>
+                  <input type = "submit" name = "submit" value = "Submit">
+               </td>
+            </tr>
+         </table>
+      </form>
+      </div>
+   </body>
+
+</html>

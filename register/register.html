@@ -17,7 +17,7 @@
 
 
 
-   <body style="background-image:url(http://www.taoqao.com/uploads/allimg/120410/1-120410202F0.gif)">
+   <body style="background-image:url()">
  <div id="roof" style="color:white"><h1>.</h1></div>
 <div>
        <h2 style=" font-family:verdana">USER REGISTER</h2>
@@ -61,7 +61,12 @@
                </td>
 
             </tr>
-
+<tr>
+               <td><span style=" font-family:verdana;">Confirm psw:</span></td>
+               <td><input type = "password" name = "confirm" size="36" required>
+		<br><span style="font-family:verdana ;" class="error"><b><?php echo $cfmErr; ?></b></span>
+		</td>
+            </tr>
             <tr>
                <td style=" font-family:verdana;">Gender:</td>
                <td>
